@@ -6,12 +6,13 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        /*//Задание 1
+        //Задание 1
         //Выведите на экран надпись
         System.out.println("“Your time is limited,\n" +
                 "\t so don’t waste it \n" +
                 " \t\t living someone else’s life”\n" +
                 " \t\t\t Steve Jobs");
+
 
         //Задание 2
         //Пользователь вводит с клавиатуры два числа. Первоечисло — это значение, второе число процент,
@@ -22,6 +23,7 @@ public class Main {
         int percent = in.nextInt();
         System.out.println("Введенный процент от введенного числа равен " + number * percent / 100);
 
+
         //Задание 3
         //Пользователь вводит с клавиатуры три цифры. Необходимо создать число, содержащее эти цифры
         int a, b, c;
@@ -30,7 +32,8 @@ public class Main {
         b = in.nextInt();
         c = in.nextInt();
         System.out.println("Из введенных цифр получаем число " + a + b + c);
-*/
+
+
         /*Задание 4
         Пользователь вводит шестизначное число. Необходимо поменять в этом числе первую и шестую цифры,
         а также  вторую и пятую цифры.  Если пользователь ввел не шестизначное число
@@ -62,6 +65,7 @@ public class Main {
         arr[1] = temp;
 
         for (int i=0; i<str.length(); i++) System.out.print(arr[i]);
+        System.out.println();
 
 
         /*Задание 5
@@ -69,7 +73,20 @@ public class Main {
         программа выводит на экран надпись: Winter, Spring, Summer, Autumn.
         Если пользователь ввел значение не в диапазоне от 1 до 12 требуется вывести сообщение об ошибке*/
 
+        boolean ok=false;
+        System.out.print("Введите номер месяца в виде целого числа от 1 до 12 -  ");
 
-
+        while (!ok) {
+            int month = in.nextInt();
+            if (month > 12 || month < 1) {
+                System.out.print("Вы не попали в диапазон от 1 до 12 Ведите снова -  ");
+            } else {
+                if (month ==1 || month ==2 || month ==12) System.out.print("Winter");
+                else if (month > 2 && month < 6) System.out.print("Spring");
+                else if (month > 5 && month < 9) System.out.print("Summer");
+                else if (month > 8 && month < 12) System.out.print("Autumn");
+                ok=true;
+            }
+        }
     }
 }
