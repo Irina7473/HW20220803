@@ -7,40 +7,39 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        //Задание 1
-        //Выведите на экран надпись
+        //Задание 1   Выведите на экран надпись
         System.out.println("“Your time is limited,\n" +
                 "\t so don’t waste it \n" +
                 " \t\t living someone else’s life”\n" +
                 " \t\t\t Steve Jobs");
+        System.out.println("-----------------------------------------------");
 
-
-        //Задание 2
-        //Пользователь вводит с клавиатуры два числа. Первоечисло — это значение, второе число процент,
-        // который  необходимо посчитать.
+        /*Задание 2
+        Пользователь вводит с клавиатуры два числа. Первоечисло — это значение, второе число процент,
+        который  необходимо посчитать.*/
         System.out.print("Введите число  ");
         int number = in.nextInt();
         System.out.print("Введите процент, который нужно посчитать, в виде целого числа  ");
         int percent = in.nextInt();
         System.out.println("Введенный процент от введенного числа равен " + number * percent / 100);
+        System.out.println("-----------------------------------------------");
 
-
-        //Задание 3
-        //Пользователь вводит с клавиатуры три цифры. Необходимо создать число, содержащее эти цифры
+        /*Задание 3
+        Пользователь вводит с клавиатуры три цифры. Необходимо создать число, содержащее эти цифры*/
         int a, b, c;
         System.out.print("Введите 3 цифры через пробел  ");
         a = in.nextInt();
         b = in.nextInt();
         c = in.nextInt();
         System.out.println("Из введенных цифр получаем число " + a + b + c);
-
+        System.out.println("-----------------------------------------------");
 
         /*Задание 4
         Пользователь вводит шестизначное число. Необходимо поменять в этом числе первую и шестую цифры,
         а также  вторую и пятую цифры.  Если пользователь ввел не шестизначное число
         требуется вывести сообщение об ошибке*/
         System.out.println("Введите 6-тизначное число  ");
-        String str = in.nextLine();
+        String str = in.next();
         str = str.trim();
         if(str==null || str.length() < 6) {
             System.out.println("Вы ввели менее 6 знаков");
@@ -66,7 +65,7 @@ public class Main {
 
         for (int i=0; i<str.length(); i++) System.out.print(arr[i]);
         System.out.println();
-
+        System.out.println("-----------------------------------------------");
 
         /*Задание 5
         Пользователь вводит с клавиатуры номер месяца (от 1 до 12). В зависимости от полученного номера месяца
@@ -80,25 +79,23 @@ public class Main {
             if (month > 12 || month < 1) {
                 System.out.print("Вы не попали в диапазон от 1 до 12 Ведите снова -  ");
             } else {
-                if (month ==1 || month ==2 || month ==12) System.out.print("Winter");
-                else if (month > 2 && month < 6) System.out.print("Spring");
-                else if (month > 5 && month < 9) System.out.print("Summer");
-                else if (month > 8 && month < 12) System.out.print("Autumn");
+                if (month ==1 || month ==2 || month ==12) System.out.println("Winter");
+                else if (month > 2 && month < 6) System.out.println("Spring");
+                else if (month > 5 && month < 9) System.out.println("Summer");
+                else if (month > 8 && month < 12) System.out.println("Autumn");
                 ok=true;
             }
         }
-
+        System.out.println("-----------------------------------------------");
 
         /*Задание 6
         Пользователь вводит с клавиатуры количество метров. В зависимости от выбора пользователя
         программа переводит метры в мили, дюймы или ярды.*/
-
         System.out.print("Введите количество метров для конвертации -  ");
         int metr = in.nextInt();
         System.out.print("Введите единицу измерения для конвертации метров, 1 - мили, 2 - дюймы, 3 - ярды :  ");
         int unitLength = in.nextInt();
         switch(unitLength){
-
             case 1:
                 System.out.println(metr + " метров = " + metr * 0.00062137 + " милей");
                 break;
@@ -112,7 +109,7 @@ public class Main {
                 System.out.println("Неизвестная единица длины");
                 return;
         }
-
+        System.out.println("-----------------------------------------------");
 
         /*Задание 7
         Пользователь вводит с клавиатуры два числа. Нужно показать все нечетные числа в указанном диапазоне. 
@@ -126,7 +123,8 @@ public class Main {
         System.out.print("Нечетные числа в указанном диапазоне :  ");
         for (int i = min; i<=max; i++)
             if ( i %2 != 0) System.out.print(i + ", ");
-
+        System.out.println();
+        System.out.println("-----------------------------------------------");
 
         /*Задание 8
         Показать на экран таблицу умножения в диапазоне, в указанном пользователем. */
@@ -142,6 +140,7 @@ public class Main {
             System.out.println();
             System.out.println("-----------------------------------------------");
         }
+        System.out.println("-----------------------------------------------");
 
         /*Задание 9
         В одномерном массиве, заполненном случайными числами, определить минимальный и максимальный элементы,
@@ -160,7 +159,7 @@ public class Main {
         }
         System.out.println();
         System.out.println("В сгенерированном массиве " +pos+ " положительных, " +neg+ " отрицательных, " +zero+ " нулевых, " +even+ " четных, " +odd+ " нечетных элементов");
-
+        System.out.println("-----------------------------------------------");
 
         /*Задание 10
         Есть одномерный массив, заполненный случайными числами. На основании данных этого массива нужно:
@@ -195,6 +194,38 @@ public class Main {
         System.out.println(Arrays.toString(arrOdd));
         System.out.println(Arrays.toString(arrNeg));
         System.out.println(Arrays.toString(arrPos));
+        System.out.println("-----------------------------------------------");
 
+        /*Задание 11
+        Напишите метод, который отображает горизонтальную или вертикальную линию из некоторого символа.
+        Метод принимает в качестве параметра: длину линии, направление, символ */
+        symbolsLine(5, 'v', 's');
+        symbolsLine(10, 'g', '!');
+        System.out.println("-----------------------------------------------");
+
+        /*Задание 12
+        Напишите метод, сортирующий массив по убыванию или возрастанию в зависимости от выбора пользователя. */
+        int [] randArr = new int[10];
+        for (int i =0; i<randArr.length; i++) {
+            randArr[i] = -10 + rand.nextInt(21);
+            System.out.print(randArr[i] + " ");
+        }
+        System.out.println();
+        sorting(randArr, 1);
+        System.out.println(Arrays.toString(randArr));
+        System.out.println("-----------------------------------------------");
+
+    }
+
+    static void symbolsLine(int length, char direction, char symbol){
+        if (direction=='v')
+            for (int i=0; i<length; i++) System.out.println(symbol);
+        if (direction=='g')
+            for (int i=0; i<length; i++) System.out.print(symbol);
+        System.out.println();
+    }
+
+    static void sorting(int[]arr, int direction){
+        Arrays.sort(arr);
     }
 }
